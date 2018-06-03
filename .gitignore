@@ -1,0 +1,114 @@
+*.zip
+*.sql
+
+# config files
+*.conf
+*.properties
+
+# logrotate status file
+*.status
+ 
+# mongodb backup
+*.mongobak
+
+# vim
+#
+*.swp
+*.sw*
+
+# OSX
+#
+.DS_Store
+__MACOSX
+
+# Xcode
+#
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+project.xcworkspace
+
+# Android/IJ
+#
+*.iml
+.idea
+.idea/*
+android/local.properties
+android/build
+android/build/*
+android/.gradle
+android/.gradle/*
+
+# iOS
+#
+ios/build
+ios/build/*
+
+# node
+#
+node_modules/
+*/node_modules/
+
+# BUCK
+buck-out/
+\.buckd/
+android/app/libs
+android/keystores/debug.keystore
+
+# local logs
+*.log
+*.log.*
+
+# crash log
+core
+
+# Docs
+docs
+docs/*
+
+# General asymmetric key files
+*.pem
+
+# Skeema
+.skeema
+
+# nohup.out
+*.out
+*.pcap
+
+out
+out/*
+
+*.iml
+.gradle
+*/.gradle
+*/.gradle/*
+*/gradle/*
+*/build
+*/build/*
+*/target
+*/target/*
+*.swp
+*/gradlew
+*/gradlew.bat
+*.classpath
+*.project
+*/catalina.base_IS_UNDEFINED
+*/catalina.base_IS_UNDEFINED/*
+
+# Specific db dump filename.
+*.sqlite
+*~
