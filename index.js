@@ -9,6 +9,7 @@ const logger = Logger.instance.getLogger(__filename);
 const fs = require('fs');
 const child_process = require('child_process');
 const path = require('path');
+const moment = require('moment');
 
 const ArgumentParser = require('argparse').ArgumentParser;
 const parser = new ArgumentParser({
@@ -79,7 +80,7 @@ parser.addArgument(
 parser.addArgument(
   ['--pushScriptExportPath'],
   {
-    defaultValue: null,
+    defaultValue: baseAbsPath + './push_script_' + moment().format('YYYY-MM-DD') + '.sql',
     required: false,
     help: 'The absolute path of file into which you want to export the push script.'
   }
@@ -344,6 +345,13 @@ function dryRunPush() {
     })
     .then(function(total) {
       logger.info(util.format("The final pushScript is\n%s", pushScript));
+      if (args.pushScriptExportPath) {
+        try {
+          fs.writeFileSync(args.pushScriptExportPath, pushScript, {flag: 'w+'});
+        } catch (exp) {
+          logger.error(exp); 
+        }
+      }
     })
     .catch(function(ex) {
       logger.error(ex);
