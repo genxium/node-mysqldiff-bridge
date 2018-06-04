@@ -283,7 +283,9 @@ function dryRunPush() {
         throw new Error();
 
       files.map(function(file) {
-        const tableName = path.basename(file, '.sql');
+        const fileFullPath = (sqlFileDirFullPath + file);
+        if (!isSqlFileSync(fileFullPath)) return;
+        const tableName = path.basename(file, '.sql');
         versionControlledTableNameList.push(tableName);
       });
 
