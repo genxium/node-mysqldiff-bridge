@@ -1,6 +1,6 @@
 {
   "name": "mysqldiff-bridge",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "This is a NodeJs bridge to execute the `mysqldiff` utility as introduced in README.",
   "main": "./index.js",
   "bin": "./index.js",

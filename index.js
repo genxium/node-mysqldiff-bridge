@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+
+"use strict";
 const baseAbsPath = __dirname + '/';
 const Promise = require('bluebird');
 const util = require('util');
