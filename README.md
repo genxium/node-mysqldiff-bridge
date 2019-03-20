@@ -16,3 +16,7 @@ Just run
 user@proj-root> node /index.js --help
 ```
 and you'll find out.
+
+# Known bug
+
+The default comparison options used by this tool WON'T generate valid altering scripts for `no AUTO_INCREMENT -> with AUTO_INCREMENT` column changes, but works for "creating column with AUTO_INCREMENT".  
